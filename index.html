@@ -18,9 +18,16 @@
 
 <body>
     <header class="body-header">
-        <div class="container header-container">
+        <div class="container padding-a header-container">
             <nav class="nav-container">
-                <a class="logo link" href="./index.html">Web<span class="studio">Studio</span></a>
+                <a class="logo logoa link" href="./index.html">Web<span class="studio">Studio</span></a>
+
+                <button class="menu-toggle" data-menu-open>
+                    <svg class="head-menu" width="32" height="22">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+
                 <ul class="header-menu list">
                     <li class="header-menu-item"><a class="header-menu-link choise link" href="./index.html">Studio</a>
                     </li>
@@ -29,6 +36,7 @@
                     <li class="header-menu-item"><a class="header-menu-link link" href="">Contacts</a></li>
                 </ul>
             </nav>
+
             <address class="contacts">
                 <ul class="contacts-menu list">
                     <li><a class="contacts-data link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
@@ -36,12 +44,75 @@
                 </ul>
             </address>
         </div>
+
+        <div class="mob-menu is-hidden" data-menu>
+            <div>
+                <button class="menu" data-menu-close>
+                    <svg class="mob-close" width="8" height="8">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <ul class="list mob-menu-list">
+                    <li class="mob-menu-item">
+                        <a class="mob-menu-link link choiseb" href="./index.html">Studio</a>
+                    </li>
+                    <li class="mob-menu-item">
+                        <a class="mob-menu-link link" href="./portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="mob-menu-item">
+                        <a class="mob-menu-link link" href="">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <address class="contacts">
+                    <ul class="list mob-menu-contact">
+                        <li class="mob-menu-item">
+                            <a class="mob-link-tel link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                        </li>
+                        <li class="mob-menu-item">
+                            <a class="mob-link-contact link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                </address>
+
+                <ul class="mob-menu-soc-item">
+                    <li class="mob-soc-item list">
+                        <a class="mob-soc-link" href="" aria-label="instagram" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="team-soc-icon icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li class="mob-soc-item list">
+                        <a class="mob-soc-link" href="" aria-label="twitter" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-soc-icon icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg></a>
+                    </li>
+                    <li class="mob-soc-item list">
+                        <a class="mob-soc-link" href="" aria-label="facebook" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-soc-icon icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg></a>
+                    </li>
+                    <li class="mob-soc-item list">
+                        <a class="mob-soc-link" href="" aria-label="linkedin" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-soc-icon icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg></a>
+                    </li>
+                </ul>
+            </div>
     </header>
 
     <main>
         <!-- 1 section -->
         <section class="introduction">
-            <div class="container">
+            <div class="container padding-a">
                 <h1 class="slogan">Effective Solutions for Your Business</h1>
                 <button class="button button-index" type="button" data-modal-open>Order Service</button>
             </div>
@@ -49,7 +120,7 @@
 
         <!-- 2 section -->
         <section class="advantages">
-            <div class="container">
+            <div class="container padding-a">
                 <h2 class="visually-hidden">Features</h2>
                 <ul class="features-container list">
                     <li class="ul-background">
@@ -101,7 +172,7 @@
 
         <!-- 3 section -->
         <section class="wawd">
-            <div class="container">
+            <div class="container padding-a">
                 <h2 class="h-two index margin-b">What are we doing</h2>
                 <ul class="wawd-container list">
                     <li class="wawd-img"><img src="./images/pc-workplace.jpg" alt="PC workplace" width="360"
@@ -116,13 +187,16 @@
 
         <!-- 4 section -->
         <section class="developers">
-            <div class="container">
+            <div class="container container-dev">
                 <h2 class="h-two index margin-b">Our Team</h2>
                 <ul class="developer-container list">
+
                     <li class="developers-border">
-                        <img src="./images/mark-guerrero.jpg" alt="Mark Guerrero" width="264" height="260">
+                        <img class="developer-photo"
+                            srcset="./images/mark-guerrero.jpg 1x, ./images/mark-guerrero-2.jpx 2x"
+                            src="./images/mark-guerrero.jpg" alt="Mark Guerrero" width="264" height="260">
                         <div class="developer-div">
-                            <h3 class="h-three center margin-a">Mark Guerrero</h3>
+                            <h3 class="h-threee center margin-a">Mark Guerrero</h3>
                             <p class="paragraph center margin-a">Product Designer</p>
                             <ul class="developer-list list">
                                 <li class="developer-item">
@@ -156,10 +230,12 @@
                             </ul>
                         </div>
                     </li>
+
                     <li class="developers-border">
-                        <img src="./images/tom-ford.jpg" alt="Tom Ford" width="264" height="260">
+                        <img class="developer-photo" srcset="./images/tom-ford.jpg 1x, ./images/tom-ford-2.jpg 2x"
+                            src="./images/tom-ford.jpg" alt="Tom Ford" width="264" height="260">
                         <div class="developer-div">
-                            <h3 class="h-three center margin-a">Tom Ford</h3>
+                            <h3 class="h-threee center margin-a">Tom Ford</h3>
                             <p class="paragraph center margin-a">Frontend Developer</p>
                             <ul class="developer-list list">
                                 <li class="developer-item">
@@ -193,10 +269,13 @@
                             </ul>
                         </div>
                     </li>
+
                     <li class="developers-border">
-                        <img src="./images/camila-garcia.jpg" alt="Camila Garcia" width="264" height="260">
+                        <img class="developer-photo"
+                            srcset="./images/camila-garcia.jpg 1x, ./images/camila-garcia-2.jpg 2x"
+                            src=" ./images/camila-garcia.jpg" alt="Camila Garcia" width="264" height="260">
                         <div class="developer-div">
-                            <h3 class="h-three center margin-a">Camila Garcia</h3>
+                            <h3 class="h-threee center margin-a">Camila Garcia</h3>
                             <p class="paragraph center margin-a">Marketing</p>
                             <ul class="developer-list list">
                                 <li class="developer-item">
@@ -230,10 +309,13 @@
                             </ul>
                         </div>
                     </li>
+
                     <li class="developers-border">
-                        <img src="./images/daniel-wilson.jpg" alt="Daniel Wilson" width="264" height="260">
+                        <img class="developer-photo"
+                            srcset="./images/daniel-wilson.jpg 1x, ./images/daniel-wilson-2.jpg 2x"
+                            src=" ./images/daniel-wilson.jpg" alt="Daniel Wilson" width="264" height="260">
                         <div class="developer-div">
-                            <h3 class="h-three center margin-a">Daniel Wilson</h3>
+                            <h3 class="h-threee center margin-a">Daniel Wilson</h3>
                             <p class="paragraph center margin-a">UI Designer</p>
                             <ul class="developer-list list">
                                 <li class="developer-item">
@@ -273,7 +355,7 @@
 
         <!-- 5 section -->
         <section class="customers">
-            <div class="container">
+            <div class="container padding-a">
                 <h2 class="h-two index margin-b">Customers</h2>
                 <ul class="customers-container list">
                     <li class="customers-container-icon">
@@ -324,15 +406,16 @@
     </main>
 
     <footer class="footer">
-        <div class="container footerf">
+        <div class="containerf">
             <div class="footer-column">
                 <a class="logo link footer-link" href="./index.html">Web<span class="studiof">Studio</span></a>
-                <p class="footerp">Increase the flow of customers and sales for your business with digital marketing &
+                <p class="footerp">Increase the flow of customers and sales for your business with digital marketing
+                    &
                     growth
                     solutions.</p>
             </div>
 
-            <div>
+            <div class="footer-soc">
                 <p class="footerm">Social media</p>
                 <ul class="footer-media-link list">
                     <li class="footer-media-list-item">
@@ -367,7 +450,7 @@
             </div>
 
             <div class="footer-column-b">
-                <p class="footerm">Subscribe</p>
+                <p class="footern">Subscribe</p>
                 <form class="footer-form">
                     <label class="footer-label"><input class="footer-input" type="email" name="user-email"
                             placeholder="E-mail"></label>
@@ -380,6 +463,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- modal -->
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -449,6 +534,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
